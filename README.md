@@ -1,33 +1,40 @@
-Tema
-Você precisa garantir a sincronização entre as threads; crie um programa que simula uma conta bancária em
-Java acessada por diferentes usuários (threads). O programa deve: criar múltiplas threads, onde cada thread representa um usuário realizado uma operação na conta bancária (saque ou deposito); implemente sincronização de threads para evitar que duas threads acessem e modifiquem o saldo da conta simultaneamente. Dica: synchronized / loc
-Passos.
-Criar uma classe ContaBancaria com métodos para sacar e depositar. Use um controlador de sincronização para garantir que apenas uma thread acesse o saldo da conta por vez. As threads devem realizar operações aleatórias (depósitos ou saques) em um intervalo de tempo. Ex: Thread 1 deposita R$100,00. Thread 2 saca R$50,00. Thread 3 deposita R$200,00. Thread 4 saca R$300,00.
-Simule uma operação em um arquivo, o arquivo deverá ser lido e cada thread processará uma linha dele. Exemplo de arquivo:
-operacao, valor
-depositar, 200
-sacar, 100
-depositar, 300
-No fim, apresente o resultado de todas as operações.
-Exemplo de arquivo de entrada
-operacao,valor
-depositar,345
-sacar,-678
-depositar,999
-sacar,-999
-depositar,0
-sacar,123
-depositar,-456
-sacar,789
-depositar,-234
-sacar,567
-depositar,-890
-sacar,321
-depositar,-654
-sacar,987
-depositar,-111
-sacar,222
-depositar,-333
-sacar,444
-depositar,-555
-sacar,666
+Desenvolva um sistema em qualquer linguagem de programação que contemple a seguinte arquitetura de sistema distribuído e que seja deployado em algum serviço cloud:
+
+
+
+Requisitos
+1) Deverá ser desenvolvido um microserviço ("Microserviço 1") como cliente em que receberá requisições HTTP em um endpoint chamado "POST /pagar"
+
+2) Deverá ser desenvolvido um microserviço ("Microserviço 2") como servidor em que receberá requisições HTTP do microserviço 1 no endpoint "POST /notificar" 
+
+3) Este microserviço 2 deverá postar uma mensagem em um tópico de mensageria (Ex. AWS SQS ou Rabbit MQ) 
+
+4) Ambos os serviços deverão ter um Dockerfile ou docker-compose e um arquivo README explicando como subir os serviços 
+
+Referências
+
+Rabbit MQ: https://engineering.3ap.ch/post/rabbitmq-vs-pubsub-part-2/
+
+GC Rabbit MQ: https://cloud.google.com/stackdriver/docs/solutions/agents/ops-agent/third-party/rabbitmq?hl=pt-br
+
+Como subir AWS localmente: https://thomasdacosta.com.br/2023/02/16/spring-boot-localstack-usando-o-aws-sqs/ 
+
+Documentação da localstack: https://github.com/localstack/localstack?tab=readme-ov-file
+
+PONTOS
+
+REQUISITO 1 = 2,5
+
+REQUISITO 2  = 2,5
+
+REQUISITO 3 = 2,5
+
+REQUISITO 4 = 2,5
+
+ENVIAR UM ÚNICO ARQUIVO .ZIP CONTENDO O README E AS APLICAÇOES BEM COMO A EXPLICAÇÃO DE COMO EXECUTAR. TAMBÉM DEVERÁ CONTER O DOCKER-COMPOSE.
+
+Enviar atribuições
+Arquivos a serem enviados
+(0) arquivo(s) a ser(em) enviado(s)
+
+Depois de carregar, você deve clicar em Enviar para concluir o envio.
